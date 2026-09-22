@@ -1,0 +1,16 @@
+corpus_paths:
+  - rag_bench/examples/eiffel_corpus.txt
+chunk_size: 30
+overlap: 10
+top_k: 2
+generation_model: openai/gpt-4o-mini
+judge_model: openai/gpt-4o-mini
+cases:
+  - id: q1
+    question: "Who designed the Eiffel Tower?"
+    relevant_doc_id: ""
+    expected_answer: "Gustave Eiffel's company"
+  - id: q2
+    question: "How tall is the Eiffel Tower?"
+    relevant_doc_id: ""
+    expected_answer: "330 metres"
