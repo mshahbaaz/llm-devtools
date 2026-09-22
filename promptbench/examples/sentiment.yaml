@@ -1,0 +1,15 @@
+models:
+  - openai/gpt-4o-mini
+  - meta-llama/llama-3.1-8b-instruct:free
+prompt_template: "Classify sentiment as exactly 'positive' or 'negative', one word only: {input}"
+scorer: exact_match
+cases:
+  - id: c1
+    input: "I absolutely loved this movie"
+    expected: "positive"
+  - id: c2
+    input: "Worst purchase I've ever made"
+    expected: "negative"
+  - id: c3
+    input: "This exceeded all my expectations"
+    expected: "positive"
